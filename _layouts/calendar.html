@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<h1>{{page.title}}</h1>
+<dl>
+  {% if page.dateStart %}
+    <dt>Datum:</dt><dd>{{page.dateStart}}</dd>
+  {% endif %}
+  {% if page.timeStart %}
+    <dt>Start:</dt><dd>{{page.timeStart}}</dd>
+  {% endif %}
+  {% if page.timeEnd %}
+    <dt>Start:</dt><dd>{{page.timeEnd}}</dd>
+  {% endif %}
+</dl>
+{{page.content}}
