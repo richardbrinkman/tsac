@@ -1,5 +1,5 @@
 ---
-layout: calendar.html
+layout: calendar
 category: calendar
 title: Hijsactie
 dateStart: 30-11-2016
