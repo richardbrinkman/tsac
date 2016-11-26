@@ -96,7 +96,7 @@
 						{% if item.layout == 'calendar.html' %}
 							<tr itemscope itemtype="http://schema.org/Event">
 								<td class="text-nowrap" style="vertical-align:top; text-align:right">
-									{{item.date}}
+									{{item.dateStart}}
 								</td>
 								<td style="width:8px">&nbsp;</td>
 								<td style="vertical-align:top"><a href="{{site.baseurl}}{{item.url}}"><span itemprop="name">{{item.title}}</span></a></td>
