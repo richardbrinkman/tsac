@@ -1,0 +1,22 @@
+---
+layout: default
+title: Agenda
+---
+
+<h1>{{page.title}}</h1>
+
+<table>
+  <tbody>
+    {% for item in site.categories.calendar %}
+      <tr>
+        <td>{{item.dateStart}}</td>
+        <td>
+          <strong>{{item.title}}</strong>
+          <br>
+          {{item.content}}
+        </td>
+      </tr>
+    {% endfor%}
+  </tbody>
+</table>
+  
