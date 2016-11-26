@@ -1,5 +1,6 @@
 ---
 layout: news.html
+category: news
 title: Website is 2-talig geworden / Website has become bilingual
 author: Richard Brinkman
 created: 15-11-2016
