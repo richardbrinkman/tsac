@@ -92,55 +92,18 @@
 			<div class="panel-heading"><a href="http://tsac.climbing.nl/agenda">Agenda</a> </div>
 			<div class="panel-body" style="overflow: hidden">
 				<table style="width:100%; border:0; border-collapse:collapse; padding:0">
-											<tr itemscope itemtype="http://schema.org/Event">
-							<td class="text-nowrap" style="vertical-align:top; text-align:right">
-								<time itemprop="startDate" datetime="2016-11-30T19:00:00Z">30</time><time itemprop="endDate" datetime="2016-11-30T21:00:00Z"> nov</time>							</td>
-							<td style="width:8px">&nbsp;</td>
-							<td style="vertical-align:top"><a href="http://tsac.climbing.nl/agenda#hijsactie-1433-20161130T200000"><span itemprop="name">Hijsactie</span></a></td>
-						</tr>
-											<tr itemscope itemtype="http://schema.org/Event">
-							<td class="text-nowrap" style="vertical-align:top; text-align:right">
-								<time itemprop="startDate" datetime="2016-12-02T23:00:00Z"> 3</time><time itemprop="endDate" datetime="2016-12-03T22:59:59Z"> dec</time>							</td>
-							<td style="width:8px">&nbsp;</td>
-							<td style="vertical-align:top"><a href="http://tsac.climbing.nl/agenda#agenda-935-20161111T220116"><span itemprop="name">NSK ijsklimmen</span></a></td>
-						</tr>
-											<tr itemscope itemtype="http://schema.org/Event">
-							<td class="text-nowrap" style="vertical-align:top; text-align:right">
-								<time itemprop="startDate" datetime="2016-12-02T23:00:00Z"> 3</time><time itemprop="endDate" datetime="2016-12-03T22:59:59Z"> dec</time>							</td>
-							<td style="width:8px">&nbsp;</td>
-							<td style="vertical-align:top"><a href="http://tsac.climbing.nl/agenda#nsac-agenda-673255-20161119T120521"><span itemprop="name">[NSAC] NSK drytool</span></a></td>
-						</tr>
-											<tr itemscope itemtype="http://schema.org/Event">
-							<td class="text-nowrap" style="vertical-align:top; text-align:right">
-								<time itemprop="startDate" datetime="2016-12-06T20:00:00Z"> 6</time><time itemprop="endDate" datetime="2016-12-06T22:00:00Z"> dec</time>							</td>
-							<td style="width:8px">&nbsp;</td>
-							<td style="vertical-align:top"><a href="http://tsac.climbing.nl/agenda#cursus-74-20161206T210000"><span itemprop="name">naklim cursus</span></a></td>
-						</tr>
-											<tr itemscope itemtype="http://schema.org/Event">
-							<td class="text-nowrap" style="vertical-align:top; text-align:right">
-								<time itemprop="startDate" datetime="2016-12-07T20:00:00Z"> 7</time><time itemprop="endDate" datetime="2016-12-07T22:00:00Z"> dec</time>							</td>
-							<td style="width:8px">&nbsp;</td>
-							<td style="vertical-align:top"><a href="http://tsac.climbing.nl/agenda#cursus-74-20161207T210000"><span itemprop="name">naklim cursus</span></a></td>
-						</tr>
-											<tr itemscope itemtype="http://schema.org/Event">
-							<td class="text-nowrap" style="vertical-align:top; text-align:right">
-								<time itemprop="startDate" datetime="2016-12-08T20:00:00Z"> 8</time><time itemprop="endDate" datetime="2016-12-08T22:00:00Z"> dec</time>							</td>
-							<td style="width:8px">&nbsp;</td>
-							<td style="vertical-align:top"><a href="http://tsac.climbing.nl/agenda#cursus-74-20161208T210000"><span itemprop="name">naklim cursus</span></a></td>
-						</tr>
-											<tr itemscope itemtype="http://schema.org/Event">
-							<td class="text-nowrap" style="vertical-align:top; text-align:right">
-								<time itemprop="startDate" datetime="2016-12-09T23:00:00Z">10</time><time itemprop="endDate" datetime="2016-12-10T22:59:59Z"> dec</time>							</td>
-							<td style="width:8px">&nbsp;</td>
-							<td style="vertical-align:top"><a href="http://tsac.climbing.nl/agenda#agenda-924-20160913T100820"><span itemprop="name">TSAC Dies</span></a></td>
-						</tr>
-											<tr itemscope itemtype="http://schema.org/Event">
-							<td class="text-nowrap" style="vertical-align:top; text-align:right">
-								<time itemprop="startDate" datetime="2016-12-10T13:00:00Z">10</time><time itemprop="endDate" datetime="2016-12-10T17:00:00Z"> dec</time>							</td>
-							<td style="width:8px">&nbsp;</td>
-							<td style="vertical-align:top"><a href="http://tsac.climbing.nl/agenda#agenda-931-20161111T215500"><span itemprop="name">Verrassingsactiviteit</span></a></td>
-						</tr>
-									</table>
+					{% for item in site.posts limit:8 reverse %}
+						{% if item.layout == 'calendar.html' %}
+							<tr itemscope itemtype="http://schema.org/Event">
+								<td class="text-nowrap" style="vertical-align:top; text-align:right">
+									{{item.date}}
+								</td>
+								<td style="width:8px">&nbsp;</td>
+								<td style="vertical-align:top"><a href="{{site.baseurl}}{{item.url}}"><span itemprop="name">{{item.title}}</span></a></td>
+							</tr>
+						{% endif %}
+					{% endfor %}
+				</table>
 				<div id="meeragendas">
 					Meer agenda's:
 					<ul>
