@@ -8,12 +8,10 @@ layout: default
 <p>Op deze site vind je informatie over onze vereniging, lid worden, activiteiten en trainingen en opleidingen. Ook vind je hier het laatste vereniging- en NSAC-nieuws en kan je op
 het prikbord klimafspraken maken. Mocht je een vraag hebben over de TSAC waarvan het antwoord niet terug te vinden is op de site, neem dan contact op met het bestuur.</p>
 
-{% for item in site.posts %}
-  {% if item.layout == 'news.html' %}
-    <hr>
-    <h2><a href="{{site.baseurl}}{{item.url}}">{{item.title}}</a></h2>
-    {{item.content}}
-    <br>
-    <em>({{item.created}} door {{item.author}})</em>
-  {% endif %}
+{% for item in site.categories.news %}
+  <hr>
+  <h2><a href="{{site.baseurl}}{{item.url}}">{{item.title}}</a></h2>
+  {{item.content}}
+  <br>
+  <em>({{item.created}} door {{item.author}})</em>
 {% endfor %}
