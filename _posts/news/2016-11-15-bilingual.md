@@ -2,6 +2,7 @@
 layout: news.html
 title: Website is 2-talig geworden / Website has become bilingual
 author: Richard Brinkman
+created: 15-11-2016
 ---
 Vandaag is dan eindelijk de laatste hand gelegd aan de mega-klus om de website 2 talig te maken. 
 De TSAC kent steeds meer leden die geen Nederlands spreken. Je kunt middels de vlaggetjes in de 
