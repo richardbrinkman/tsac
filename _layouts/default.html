@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<title>Twentse Studenten Alpen Club</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="shortcut icon" href="/images/website/favicon.ico" type="image/x-icon">
+		<link rel="apple-touch-icon" href="/images/website/apple-touch-icon.png">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="/css/tsac.css?version=1479495714" type="text/css">
+		<link rel="alternate" href="/?locale=nl_NL" hreflang="nl" title="Nederlanse vertaling">
+		<link rel="alternate" href="/?locale=en_US" hreflang="en" title="English translation">
+		<link rel="alternate" href="/nieuws/rss" type="application/rss+xml" title="nieuws">
+		<link rel="alternate" href="/agenda/rss" type="application/rss+xml" title="agenda">
+		<link rel="alternate" href="/photos/rss" type="application/rss+xml" title="photos">
+		<link rel="alternate" href="/wiki/rss" type="application/rss+xml" title="wiki">
+		<script src="http://tsac.climbing.nl/js/site.js?version=1469561218" defer></script>
+		<script src="http://tsac.climbing.nl/js/poll.js?version=1448106765" defer></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			var datefield=document.createElement("input");
+			datefield.setAttribute("type", "date");
+			if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
+				document.write('<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />\n');
+				document.write('<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"><\/script>\n');
+			}
+		</script>
+		<script>
+			jQuery(function($) { //on document.ready
+				if (datefield.type != "date") //if browser doesn't support input type="date", initialize date picker widget:
+					$('input[type="date"]').attr("pattern", '(19|20)\\d{2}-(0\\d|1[0-2])-([0-2]\\d|3[0-1])').datepicker({dateFormat: "yy-mm-dd"});
+				datefield.type = "time";
+				if (datefield.type != "time") //if browser doesn't support input type="time", use regexp:
+					$('input[type="time"]').attr("pattern", '([0-1]\\d|2[0-3]):[0-5]\\d');
+			});
+		</script>
+
+			</head>
+	<body>
+		<header class="navbar navbar-default navbar-collapse">
+			<div class="navbar-brand">
+				<a href="/"><span class="hidden-xs">Twentse Studenten Alpen Club</span><span class="visible-xs-inline">TSAC</span></a>
+			</div>
+																<div class="visible-xs-inline navbar-right navbar-text">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#aside-left">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="glyphicon glyphicon-menu-hamburger"></span>
+				</button>
+			</div>
+		</header>
+		<main class="container-fluid">
+			<aside id="aside-left" class="col-sm-3 col-md-2 nav collapse">
+				<nav class="panel panel-default">
+					<div class="panel-heading">Menu</div>
+					<div class="panel-body panel-menu">
+						<ul id="menu-main" class="nav">
+							<li><a href="/nieuws">Nieuws</a></li><li><a data-toggle="collapse" href="#menu-klimmen" id="menu-button-klimmen" aria-expanded="false">Klimmen<span class="caret"></span></a><ul class="nav collapse" id="menu-klimmen" role="menu" aria-labelledby="menu-button-klimmen"><li><a href="/klimmen/zaalavond">Zaalavond</a></li><li><a href="/klimmen/opleiding">Opleiding</a></li><li><a href="/klimmen/training">Training</a></li><li><a href="/klimmen/weekendjes">Weekendjes</a></li><li><a href="/klimmen/cursussen">Cursussen</a></li><li><a href="/klimgebieden">Klimgebieden</a></li><li><a href="/klimmen/diensten">Diensten</a></li><li><a href="/klimmen/nsac">NSAC</a></li></ul></li><li><a data-toggle="collapse" href="#menu-vereniging" id="menu-button-vereniging" aria-expanded="false">Vereniging<span class="caret"></span></a><ul class="nav collapse" id="menu-vereniging" role="menu" aria-labelledby="menu-button-vereniging"><li><a href="/vereniging/disciplines">Disciplines</a></li><li><a href="/vereniging/geschiedenis">Geschiedenis</a></li><li><a data-toggle="collapse" href="#menu-vereniging-bestuur" id="menu-button-vereniging-bestuur" aria-expanded="false">Bestuur<span class="caret"></span></a><ul class="nav collapse" id="menu-vereniging-bestuur" role="menu" aria-labelledby="menu-button-vereniging-bestuur"><li><a href="/vereniging/bestuur">Huidig bestuur</a></li><li><a href="/vereniging/bestuur/oud">Oude besturen</a></li></ul></li><li><a href="/vereniging/commissies">Commissies</a></li><li><a href="/vereniging/lidmaatschap">Lidmaatschap</a></li><li><a href="/vereniging/lied">Verenigingslied</a></li><li><a href="/vereniging/kleding">Kledinglijn</a></li><li><a href="/vereniging/contact">Contact</a></li></ul></li><li><a data-toggle="collapse" href="#menu-media" id="menu-button-media" aria-expanded="false">Media<span class="caret"></span></a><ul class="nav collapse" id="menu-media" role="menu" aria-labelledby="menu-button-media"><li><a href="/photos/albums">Fotos</a></li><li><a href="/media/youtube">Videos</a></li><li><a data-toggle="collapse" href="#menu-media-documenten" id="menu-button-media-documenten" aria-expanded="false">Documenten<span class="caret"></span></a><ul class="nav collapse" id="menu-media-documenten" role="menu" aria-labelledby="menu-button-media-documenten"><li><a href="/theeblaadjes">Theeblaadjes</a></li><li><a href="/truustopo">Klimm in Twenth</a></li><li><a href="/topos/index">Topos</a></li><li><a href="/literatuur/overzicht">Literatuuroverzicht</a></li></ul></li><li><a href="/links">Links</a></li></ul></li><li><a href="/login">Inloggen</a></li>						</ul>
+					</div>
+				</nav>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">Banners</div>
+					<div class="panel-body">
+						<a href="/oferall/"><img style="width: 100%" src="/images/website/banners/banner_oferall_lq.jpg" alt="Stuntteam Enschede Oferall klimmen abseilen hoogtewerk"></a>
+						<br><br>
+						<a href="http://www.klimwinkel.nl" target="_blank"><img style="width: 100%;" src="/images/website/banners/klimwinkel.png" alt="Klimwinkel"></a>
+					</div>
+				</div>
+			</aside>
+
+			<article class="col-sm-5 col-md-7 col-lg-8">
+        {{content}}
+			</article>
+			<aside class="col-sm-4 col-md-3 col-lg-2">
+					<div id="right">
+		<div class="panel panel-default quick-links">
+			<div class="panel-heading"><a href="/links">Quick Links</a></div>
+			<div class="panel-body" style="overflow: hidden; text-align: center;">
+				<div class="col-sm-3">
+					<a href="/?locale=nl_NL" hreflang="nl"><img src="/images/website/nl_icon.png" alt="Nederlands" width="20" height="13"></a>
+					<a href="/?locale=en_US" hreflang="en"><img src="/images/website/enlogo.jpg" alt="English" width="20" height="13"></a>
+				</div>
+				<div class="col-sm-3"><a href="https://www.facebook.com/groups/295757807117249/" target="_blank"><img src="/images/website/fblogo.jpg" alt="Facebook groep" width="20"/></a></div>
+				<div class="col-sm-3"><a href="https://www.nkbv.nl/" target="_blank"><img src="/images/website/nkbvlogo.jpg" alt="NKBV" height="20"/></a></div>
+				<div class="col-sm-3"><a href="https://nsac.climbing.nl/" target="_blank"><img src="/images/website/nsaclogo.jpg" alt="NSAC" height="20"/></a></div>
+			</div>
+		</div>
+
+		
+		<div class="panel panel-default">
+			<div class="panel-heading"><a href="http://tsac.climbing.nl/agenda">Agenda</a> </div>
+			<div class="panel-body" style="overflow: hidden">
+				<table style="width:100%; border:0; border-collapse:collapse; padding:0">
+											<tr itemscope itemtype="http://schema.org/Event">
+							<td class="text-nowrap" style="vertical-align:top; text-align:right">
+								<time itemprop="startDate" datetime="2016-11-30T19:00:00Z">30</time><time itemprop="endDate" datetime="2016-11-30T21:00:00Z"> nov</time>							</td>
+							<td style="width:8px">&nbsp;</td>
+							<td style="vertical-align:top"><a href="http://tsac.climbing.nl/agenda#hijsactie-1433-20161130T200000"><span itemprop="name">Hijsactie</span></a></td>
+						</tr>
+											<tr itemscope itemtype="http://schema.org/Event">
+							<td class="text-nowrap" style="vertical-align:top; text-align:right">
+								<time itemprop="startDate" datetime="2016-12-02T23:00:00Z"> 3</time><time itemprop="endDate" datetime="2016-12-03T22:59:59Z"> dec</time>							</td>
+							<td style="width:8px">&nbsp;</td>
+							<td style="vertical-align:top"><a href="http://tsac.climbing.nl/agenda#agenda-935-20161111T220116"><span itemprop="name">NSK ijsklimmen</span></a></td>
+						</tr>
+											<tr itemscope itemtype="http://schema.org/Event">
+							<td class="text-nowrap" style="vertical-align:top; text-align:right">
+								<time itemprop="startDate" datetime="2016-12-02T23:00:00Z"> 3</time><time itemprop="endDate" datetime="2016-12-03T22:59:59Z"> dec</time>							</td>
+							<td style="width:8px">&nbsp;</td>
+							<td style="vertical-align:top"><a href="http://tsac.climbing.nl/agenda#nsac-agenda-673255-20161119T120521"><span itemprop="name">[NSAC] NSK drytool</span></a></td>
+						</tr>
+											<tr itemscope itemtype="http://schema.org/Event">
+							<td class="text-nowrap" style="vertical-align:top; text-align:right">
+								<time itemprop="startDate" datetime="2016-12-06T20:00:00Z"> 6</time><time itemprop="endDate" datetime="2016-12-06T22:00:00Z"> dec</time>							</td>
+							<td style="width:8px">&nbsp;</td>
+							<td style="vertical-align:top"><a href="http://tsac.climbing.nl/agenda#cursus-74-20161206T210000"><span itemprop="name">naklim cursus</span></a></td>
+						</tr>
+											<tr itemscope itemtype="http://schema.org/Event">
+							<td class="text-nowrap" style="vertical-align:top; text-align:right">
+								<time itemprop="startDate" datetime="2016-12-07T20:00:00Z"> 7</time><time itemprop="endDate" datetime="2016-12-07T22:00:00Z"> dec</time>							</td>
+							<td style="width:8px">&nbsp;</td>
+							<td style="vertical-align:top"><a href="http://tsac.climbing.nl/agenda#cursus-74-20161207T210000"><span itemprop="name">naklim cursus</span></a></td>
+						</tr>
+											<tr itemscope itemtype="http://schema.org/Event">
+							<td class="text-nowrap" style="vertical-align:top; text-align:right">
+								<time itemprop="startDate" datetime="2016-12-08T20:00:00Z"> 8</time><time itemprop="endDate" datetime="2016-12-08T22:00:00Z"> dec</time>							</td>
+							<td style="width:8px">&nbsp;</td>
+							<td style="vertical-align:top"><a href="http://tsac.climbing.nl/agenda#cursus-74-20161208T210000"><span itemprop="name">naklim cursus</span></a></td>
+						</tr>
+											<tr itemscope itemtype="http://schema.org/Event">
+							<td class="text-nowrap" style="vertical-align:top; text-align:right">
+								<time itemprop="startDate" datetime="2016-12-09T23:00:00Z">10</time><time itemprop="endDate" datetime="2016-12-10T22:59:59Z"> dec</time>							</td>
+							<td style="width:8px">&nbsp;</td>
+							<td style="vertical-align:top"><a href="http://tsac.climbing.nl/agenda#agenda-924-20160913T100820"><span itemprop="name">TSAC Dies</span></a></td>
+						</tr>
+											<tr itemscope itemtype="http://schema.org/Event">
+							<td class="text-nowrap" style="vertical-align:top; text-align:right">
+								<time itemprop="startDate" datetime="2016-12-10T13:00:00Z">10</time><time itemprop="endDate" datetime="2016-12-10T17:00:00Z"> dec</time>							</td>
+							<td style="width:8px">&nbsp;</td>
+							<td style="vertical-align:top"><a href="http://tsac.climbing.nl/agenda#agenda-931-20161111T215500"><span itemprop="name">Verrassingsactiviteit</span></a></td>
+						</tr>
+									</table>
+				<div id="meeragendas">
+					Meer agenda's:
+					<ul>
+						<li>
+							<a href="/zaalwachten">Zaalwachten</a>
+													</li>
+						<li><a href="/bardiensten">Bardiensten</a></li>
+						<li><a href="/buitenwandagenda">Buitenwandagenda</a></li>
+						<li>
+							<a href="/cursussen">Cursussen</a>
+													</li>
+						<li>
+							<a href="/weekenden">Klimweekenden</a>
+													</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><a href="/photos/albums">Foto's</a> </div>
+			<div class="panel-body" style="overflow: hidden">
+				<div class="photo"><a href="/photos/album/258"><img src="https://lh3.googleusercontent.com/-Zyhie8XNfK8/Vgqb7-4Yh0I/AAAAAAAAChE/VQrdGHoVeC8Rj0ltQFaMV4jLBzFoLmbKwCHM/s512/IMG_0535.jpg" alt="SCK 2015" title="SCK 2015"></a><p><a href="/photos/category/139" style="color: white">SCK 2015</a></p></div>				<table style="width:100%; border-collapse:collapse">
+									<tr itemscope itemtype="http://schema.org/ImageGallery">
+						<td class="text-nowrap" style="width:50px; vertical-align:top; text-align:right">
+							<time itemprop="dateCreated" datetime="2016-11-11T23:00:00Z">12 nov</time>						</td>
+						<td style="width:8px"></td>
+						<td>
+							<a href="http://tsac.climbing.nl/photos/category/172">
+							<span itemprop="name">Intocht<br />sinterklaas<br />2016</span>
+							</a>
+						</td>
+					</tr>
+									<tr itemscope itemtype="http://schema.org/ImageGallery">
+						<td class="text-nowrap" style="width:50px; vertical-align:top; text-align:right">
+							<time itemprop="dateCreated" datetime="2016-10-20T22:00:00Z">21 okt</time>						</td>
+						<td style="width:8px"></td>
+						<td>
+							<a href="http://tsac.climbing.nl/photos/category/171">
+							<span itemprop="name">Beginnersweeken<br />d Ith oktober<br />2016</span>
+							</a>
+						</td>
+					</tr>
+									<tr itemscope itemtype="http://schema.org/ImageGallery">
+						<td class="text-nowrap" style="width:50px; vertical-align:top; text-align:right">
+							<time itemprop="dateCreated" datetime="2016-09-23T22:00:00Z">24 sep</time>						</td>
+						<td style="width:8px"></td>
+						<td>
+							<a href="http://tsac.climbing.nl/photos/category/170" class="needslogin" title="vereist login">
+							<span itemprop="name">Brochterbeck</span>
+							</a>
+						</td>
+					</tr>
+									<tr itemscope itemtype="http://schema.org/ImageGallery">
+						<td class="text-nowrap" style="width:50px; vertical-align:top; text-align:right">
+							<time itemprop="dateCreated" datetime="2016-09-16T22:00:00Z">17 sep</time>						</td>
+						<td style="width:8px"></td>
+						<td>
+							<a href="http://tsac.climbing.nl/photos/category/169" class="needslogin" title="vereist login">
+							<span itemprop="name">Ettringen 2016</span>
+							</a>
+						</td>
+					</tr>
+									<tr itemscope itemtype="http://schema.org/ImageGallery">
+						<td class="text-nowrap" style="width:50px; vertical-align:top; text-align:right">
+							<time itemprop="dateCreated" datetime="2016-08-07T22:00:00Z"> 8 aug</time>						</td>
+						<td style="width:8px"></td>
+						<td>
+							<a href="http://tsac.climbing.nl/photos/category/168">
+							<span itemprop="name">ABK &Ouml;tztal<br />2016</span>
+							</a>
+						</td>
+					</tr>
+									<tr itemscope itemtype="http://schema.org/ImageGallery">
+						<td class="text-nowrap" style="width:50px; vertical-align:top; text-align:right">
+							<time itemprop="dateCreated" datetime="2016-06-11T22:00:00Z">12 jun</time>						</td>
+						<td style="width:8px"></td>
+						<td>
+							<a href="http://tsac.climbing.nl/photos/category/165">
+							<span itemprop="name">Familiedag 2016</span>
+							</a>
+						</td>
+					</tr>
+								</table>
+				<div style="margin-top: 5px;"><a href="http://tsac.climbing.nl/photos/add">Nieuwe album toevoegen</a></div>
+			</div>
+		</div>
+
+		<div class="panel panel-default" itemscope itemtype="http://schema.org/Blog">
+			<div class="panel-heading"><a href="http://tsac.climbing.nl/prikbord">Prikbord</a></div>
+			<div class="panel-body">
+
+				<table style="width:100%; border-collapse:collapse">
+											<tr itemscope itemtype="http://schema.org/BlogPosting">
+							<td class="text-nowrap" style="width:50px; vertical-align:top; text-align:right">
+								<time itemprop="datePublished" datetime="2016-09-28T13:48:08Z"></time>
+								<time itemprop="dateModified" datetime="2016-09-28T13:48:08Z">28 sep</time>							</td>
+							<td style="width:8px"></td>
+							<td>
+								<meta itemprop="author" content="Jeroen van den Berg">
+								<a href="http://tsac.climbing.nl/prikbord/topic/2269">
+									<span itemprop="name"><span itemprop="headline">20:00 Buitenwand</span></span>
+								</a>
+								<span class="vsmall" itemprop="commentCount">(1)</span>
+							</td>
+						</tr>
+											<tr itemscope itemtype="http://schema.org/BlogPosting">
+							<td class="text-nowrap" style="width:50px; vertical-align:top; text-align:right">
+								<time itemprop="datePublished" datetime="2016-08-16T11:10:51Z"></time>
+								<time itemprop="dateModified" datetime="2016-08-16T11:10:51Z">16 aug</time>							</td>
+							<td style="width:8px"></td>
+							<td>
+								<meta itemprop="author" content="Coen Welhuis">
+								<a href="http://tsac.climbing.nl/prikbord/topic/2268">
+									<span itemprop="name"><span itemprop="headline">Buitenwand vanavond!!</span></span>
+								</a>
+								<span class="vsmall" itemprop="commentCount">(1)</span>
+							</td>
+						</tr>
+											<tr itemscope itemtype="http://schema.org/BlogPosting">
+							<td class="text-nowrap" style="width:50px; vertical-align:top; text-align:right">
+								<time itemprop="datePublished" datetime="2016-07-19T14:19:45Z"></time>
+								<time itemprop="dateModified" datetime="2016-07-19T14:19:45Z">19 jul</time>							</td>
+							<td style="width:8px"></td>
+							<td>
+								<meta itemprop="author" content="Coen Welhuis">
+								<a href="http://tsac.climbing.nl/prikbord/topic/2267">
+									<span itemprop="name"><span itemprop="headline">Buitenwand 19 Juli</span></span>
+								</a>
+								<span class="vsmall" itemprop="commentCount">(1)</span>
+							</td>
+						</tr>
+											<tr itemscope itemtype="http://schema.org/BlogPosting">
+							<td class="text-nowrap" style="width:50px; vertical-align:top; text-align:right">
+								<time itemprop="datePublished" datetime="2016-06-14T19:09:39Z"></time>
+								<time itemprop="dateModified" datetime="2016-06-15T04:38:01Z">15 jun</time>							</td>
+							<td style="width:8px"></td>
+							<td>
+								<meta itemprop="author" content="Jasper Tas">
+								<a href="http://tsac.climbing.nl/prikbord/topic/2266">
+									<span itemprop="name"><span itemprop="headline">Hijsactie Aloha 17 Juni</span></span>
+								</a>
+								<span class="vsmall" itemprop="commentCount">(2)</span>
+							</td>
+						</tr>
+											<tr itemscope itemtype="http://schema.org/BlogPosting">
+							<td class="text-nowrap" style="width:50px; vertical-align:top; text-align:right">
+								<time itemprop="datePublished" datetime="2016-04-21T12:24:59Z"></time>
+								<time itemprop="dateModified" datetime="2016-04-21T12:24:59Z">21 apr</time>							</td>
+							<td style="width:8px"></td>
+							<td>
+								<meta itemprop="author" content="Coen Welhuis">
+								<a href="http://tsac.climbing.nl/prikbord/topic/2265">
+									<span itemprop="name"><span itemprop="headline">Buitenwand 21 april</span></span>
+								</a>
+								<span class="vsmall" itemprop="commentCount">(1)</span>
+							</td>
+						</tr>
+									</table>
+			</div>
+		</div>
+
+		<div class="panel panel-default">
+			<div class="panel-heading">Poll </div>
+			<div class="panel-body" id="poll">
+				<b>Ik was bij de USAC Dies en heb...</b>
+<br/><br/>
+	<form id="pollform" method="post" action="/poll/vote">
+		<input type="hidden" name="poll_id" value="931" />
+		<table style="border:0; border-collapse:collapse; padding:0">
+							<tr>
+					<td style="vertical-align:top"><input type="radio" name="option" required value="4540" />&nbsp;Te veel bier bedronken.</td>
+				</tr>
+							<tr>
+					<td style="vertical-align:top"><input type="radio" name="option" required value="4541" />&nbsp;Mijn shirt uitgetrokken.</td>
+				</tr>
+							<tr>
+					<td style="vertical-align:top"><input type="radio" name="option" required value="4542" />&nbsp;5 dagen lang aluminiumfolie lopen verwijderen.</td>
+				</tr>
+							<tr>
+					<td style="vertical-align:top"><input type="radio" name="option" required value="4543" />&nbsp;Mijn interraciale contacten versterkt.</td>
+				</tr>
+							<tr>
+					<td style="vertical-align:top"><input type="radio" name="option" required value="4544" />&nbsp;Erik bewonderd.</td>
+				</tr>
+							<tr>
+					<td style="vertical-align:top"><input type="radio" name="option" required value="4545" />&nbsp;Episch gedjenst.</td>
+				</tr>
+							<tr>
+					<td style="vertical-align:top"><input type="radio" name="option" required value="4546" />&nbsp;Moeilijk veel gezweet.</td>
+				</tr>
+							<tr>
+					<td style="vertical-align:top"><input type="radio" name="option" required value="4547" />&nbsp;Geen kaartje weten te bemachtigen.</td>
+				</tr>
+							<tr>
+					<td style="vertical-align:top"><input type="radio" name="option" required value="4548" />&nbsp;Vrouwen gezien.</td>
+				</tr>
+					</table>
+		<br />
+		
+		<input type="submit" value="stem" id="votePoll" />
+	</form>
+			</div>
+		</div>
+	</div>
+			</aside>
+		</main>
+				<footer class="footer">
+			<div class="navbar-text">webmaster: <a href="/vereniging/contact#website">Richard Brinkman</a></div>
+		</footer>
+
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-830370-9', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</body>
+</html>
