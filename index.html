@@ -10,7 +10,7 @@ het prikbord klimafspraken maken. Mocht je een vraag hebben over de TSAC waarvan
 
 {% for item in site.posts %}
   <hr>
-  <h2>{{item.title}}</h2>
+  <h2><a href="{{site.baseurl}}{{item.url}}">{{item.title}}</a></h2>
   {{item.content}}
   <br>
   <em>({{item.created}} door {{item.author}})</em>
