@@ -92,7 +92,7 @@
 			<div class="panel-heading"><a href="{{site.baseurl}}/agenda.html">Agenda</a> </div>
 			<div class="panel-body" style="overflow: hidden">
 				<table style="width:100%; border:0; border-collapse:collapse; padding:0">
-					{% for item in site.categories.calendar limit:8 %}
+					{% for item in site.categories.calendar limit:8 reversed %}
 						<tr itemscope itemtype="http://schema.org/Event">
 							<td class="text-nowrap" style="vertical-align:top; text-align:right">
 								{{item.dateStart}}
