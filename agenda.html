@@ -7,7 +7,7 @@ title: Agenda
 
 <table>
   <tbody>
-    {% for item in site.categories.calendar %}
+    {% for item in site.categories.calendar reversed %}
       <tr>
         <td valign="top">{{item.dateStart}}</td>
         <td>
