@@ -9,7 +9,7 @@ layout: default
 het prikbord klimafspraken maken. Mocht je een vraag hebben over de TSAC waarvan het antwoord niet terug te vinden is op de site, neem dan contact op met het bestuur.</p>
 
 {% for item in site.posts %}
-  {% if item.type == 'news' %}
+  {% if item.layout == 'news.html' %}
     <hr>
     <h2><a href="{{site.baseurl}}{{item.url}}">{{item.title}}</a></h2>
     {{item.content}}
