@@ -1,5 +1,5 @@
 ---
-layout: news.html
+layout: news
 category: news
 title: Website is 2-talig geworden / Website has become bilingual
 author: Richard Brinkman
